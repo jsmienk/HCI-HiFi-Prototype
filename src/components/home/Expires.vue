@@ -1,7 +1,7 @@
 <template>
-  <section>
+  <section class="expires">
     <h2>Expires soon</h2>
-    <HorizontalList :items="expires" />
+    <HorizontalList :items="data" />
   </section>
 </template>
 
@@ -10,7 +10,7 @@ import HorizontalList from '@/components/HorizontalList.vue'
 
 export default {
   name: 'expires',
-  props: ['expires'],
+  props: ['data'],
   components: {
     HorizontalList
   }

@@ -1,10 +1,10 @@
 <template>
   <div class="home">
     <h1>Home</h1>
-    <Inventory />
-    <Leftovers />
-    <Expires :expires="data.expires" />
-    <Recipes :recipes="data.recipes" />
+    <Inventory :data="data.inventory" />
+    <Leftovers :data="data.leftovers" />
+    <Expires :data="data.expires" />
+    <Recipes :data="data.recipes" />
   </div>
 </template>
 
@@ -35,8 +35,11 @@ export default {
     padding: 32px;
 
     section {
-      margin-top: 32px;
       border-top: 1px solid #666;
+
+      h2 {
+        margin: 6px 2px;
+      }
     }
   }
 </style>

@@ -16,14 +16,14 @@
 
 <script>
   export default {
-    name: '',
+    name: 'horizontal-list',
     props: ['items'],
     methods: {
       getContainerStyle() {
         /*
         Total width is # x width + # x margin
         */
-        return 'width: ' + (this.items.length * 216 + 48) + 'px;'
+        return 'width: ' + (this.items.length * 136 + 48) + 'px;'
       },
       getBackgroundStyle(image) {
         return 'background-image: url("' + image + '");'
@@ -35,7 +35,7 @@
 <style lang="scss">
   $scroller-padding: 32px;
   $scroller-padding-big: 80px;
-  $scroller-height: 160px;
+  $scroller-height: 130px;
 
   .item-scroller-container {
     position: relative;
@@ -56,7 +56,7 @@
         .item {
           display: inline-grid;
           margin-right: 16px;
-          max-width: 200px;
+          max-width: 120px;
 
           .title {
             display: block;
@@ -70,8 +70,8 @@
             border-radius: 12px;
             box-shadow: 0px 4px 12px 0px #999;
 
-            width: 200px;
-            height: 128px;
+            width: 120px;
+            height: 70px;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: 50% 50%;
@@ -84,7 +84,7 @@
     .left-gradient, .right-gradient {
       position: absolute;
       width: $scroller-padding;
-      height: 180px;
+      height: calc(#{$scroller-height} + 10px);
       display: block;
     }
 

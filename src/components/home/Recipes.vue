@@ -1,7 +1,7 @@
 <template>
-  <section>
+  <section class="recipes">
     <h2>Recipe recommendations</h2>
-    <HorizontalList :items="recipes" />
+    <HorizontalList :items="data" />
   </section>
 </template>
 
@@ -10,7 +10,7 @@ import HorizontalList from '@/components/HorizontalList.vue'
 
 export default {
   name: 'recipes',
-  props: ['recipes'],
+  props: ['data'],
   components: {
     HorizontalList
   }
