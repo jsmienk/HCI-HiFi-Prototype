@@ -1,4 +1,11 @@
-# hci-hifi
+# HCI High Fidelity Prototype
+
+_Group 18_
+
+## Useful links
+
+- [Web Storage](https://vuejs.org/v2/cookbook/client-side-storage.html)
+
 
 ## Project setup
 ```
