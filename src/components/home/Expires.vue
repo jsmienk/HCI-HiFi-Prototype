@@ -1,18 +1,36 @@
 <template>
   <section class="expires">
     <h2>Expires soon</h2>
-    <HorizontalList :items="data" />
+    <div class="expires-container">
+      <span v-for="item in data" :key="item.id" class="expires">
+        {{ item.title }}
+      </span>
+    </div>
   </section>
 </template>
 
 <script>
-import HorizontalList from '@/components/HorizontalList.vue'
-
 export default {
   name: 'expires',
   props: ['data'],
-  components: {
-    HorizontalList
-  }
+  components: {}
 }
 </script>
+
+<style lang="scss">
+  .expires {
+    padding-bottom: 16px;
+
+    .expires-container {
+      display: flex;
+      flex-wrap: wrap;
+
+      .expires {
+        padding: 0 12px;
+        border-radius: 12px;
+        background-color: #ddd;
+        margin: 0 8px 8px 0;
+      }
+    }
+  }
+</style>

@@ -66,20 +66,52 @@ export default {
   'expires': [
     {
       'id': 0,
-      'title': 'Fruit',
-      'thumbnail': 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/766/low-calorie-fruit-1516368847.jpg?resize=480:*',
+      'title': 'Milk',
       'meta': {}
     },
     {
       'id': 1,
-      'title': 'Fruit',
-      'thumbnail': 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/766/low-calorie-fruit-1516368847.jpg?resize=480:*',
+      'title': 'Chicken filet',
       'meta': {}
     },
     {
       'id': 2,
-      'title': 'Fruit',
-      'thumbnail': 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/766/low-calorie-fruit-1516368847.jpg?resize=480:*',
+      'title': 'Tomatoes',
+      'meta': {}
+    },
+    {
+      'id': 3,
+      'title': 'Milk',
+      'meta': {}
+    },
+    {
+      'id': 4,
+      'title': 'Chicken filet',
+      'meta': {}
+    },
+    {
+      'id': 5,
+      'title': 'Tomatoes',
+      'meta': {}
+    },
+    {
+      'id': 6,
+      'title': 'Milk',
+      'meta': {}
+    },
+    {
+      'id': 7,
+      'title': 'Chicken filet',
+      'meta': {}
+    },
+    {
+      'id': 8,
+      'title': 'Tomatoes',
+      'meta': {}
+    },
+    {
+      'id': 9,
+      'title': 'Milk',
       'meta': {}
     }
   ],
@@ -113,6 +145,11 @@ export default {
       'title': 'Fruit',
       'thumbnail': 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/766/low-calorie-fruit-1516368847.jpg?resize=480:*',
       'meta': {}
+    }
+  ],
+  'ads': [
+    {
+      'id': 0
     }
   ]
 }
