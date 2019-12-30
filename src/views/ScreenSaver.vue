@@ -17,7 +17,7 @@
 
     <div class="screensaver-info">
       <!-- Back to home -->
-      <a class="button home-button" href="/home">Home</a>
+      <a class="button main-button" href="/home">Home</a>
     </div>
   </div>
 </template>
@@ -86,8 +86,8 @@
           display: block;
           position: relative; /* Needed if loop: true */
           flex: 0 0 100%; /* Choose any slide width */
-          height: calc(100vh - 264px);
-          padding: 32px;
+          height: calc(100vh - 232px);
+          padding: 32px 32px 64px 32px;
 
           text-decoration: none;
           color: #333;
@@ -109,12 +109,6 @@
 
     .screensaver-info {
       text-align: center;
-      margin-top: 32px;
-
-      .button.home-button {
-        background-color: orange;
-        color: white;
-      }
     }
   }
 </style>
