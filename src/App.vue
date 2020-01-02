@@ -23,6 +23,10 @@
       justify-content: space-between;
       align-items: center;
     }
+
+    &.hover {
+      padding: 0;
+    }
   }
 
   .button {

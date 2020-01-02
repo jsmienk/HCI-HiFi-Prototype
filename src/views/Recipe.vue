@@ -1,13 +1,6 @@
 <template>
-  <div class="screen">
-    <header class="hover">
-      <!-- Back button -->
-      <a class="button back-button" @click="$router.go(-1)">⬅ Back</a>
-      <!-- Page title -->
-      <h1>Recipe</h1>
-      <!-- Weight to center the title -->
-      <div style="width: 100px;" />
-    </header>
+  <div class="screen hover">
+    <HeaderHover title="Recipe" />
 
     <!-- Recipe -->
     <article class="recipe">
@@ -31,13 +24,14 @@
     </article>
 
     <!-- Start cooking -->
-    <div class="start-cooking hover">
+    <div class="start-cooking">
       <a class="button main-button" @click="startCooking()">Start cooking</a>
     </div>
   </div>
 </template>
 
 <script>
+  import HeaderHover from '@/components/HeaderHover.vue'
   import AmountSelector from '@/components/AmountSelector.vue'
   import Ingredients from '@/components/recipe/Ingredients.vue'
 
@@ -46,7 +40,7 @@
 
   export default {
     name: 'recipe',
-    components: { AmountSelector, Ingredients },
+    components: { HeaderHover, AmountSelector, Ingredients },
     data() {
       return {
         recipe: data.recipes[this.$route.params.id],
@@ -63,6 +57,7 @@
           name: 'cooking',
           params: {
             id: this.$route.params.id,
+            nrPeople: this.nrPeople,
             ingredients: this.ingredients
           }
         })
@@ -72,25 +67,6 @@
 </script>
 
 <style lang="scss" scoped>
-  .screen {
-    padding: 0;
-  }
-
-  .hover {
-    position: fixed;
-    width: 100%;
-  }
-
-  header {
-    top: 0;
-    padding: 32px;
-    background-image: linear-gradient(#ffffffff, #ffffffff, #ffffff00);
-
-    h1 {
-      margin: 0;
-    }
-  }
-
   .recipe {
     padding: 119px 64px 128px;
 
@@ -120,6 +96,8 @@
   }
 
   .start-cooking {
+    position: fixed;
+    width: 100%;
     bottom: 64px;
     text-align: center;
   }

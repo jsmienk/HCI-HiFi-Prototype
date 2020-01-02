@@ -43,6 +43,7 @@
     watch: {
       amount(val) {
         this.internalAmount = val
+        this.$emit('change', this.internalAmount)
       }
     },
     methods: {

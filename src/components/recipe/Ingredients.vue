@@ -5,7 +5,7 @@
       <AmountSelector class="selector" :initial-amount="ingredient.amount" :unit="ingredient.unit" 
         :amount="getIngredientForNrPeople(ingredient.amount, ingredient.increment)" 
         :increment="ingredient.increment" :min="ingredient.min" :max="ingredient.max" 
-        @change="onIngredientChange(key, $event)" small />
+        @change="onIngredientChange(key, $event, true)" small />
     </div>
   </div>
 </template>
@@ -26,15 +26,23 @@
         chosenIngredients: {}
       }
     },
+    mounted() {
+      for (let key in this.ingredients) {
+        this.onIngredientChange(key, this.ingredients[key].amount, false)
+      }
+      this.$emit('ingredients-change', this.chosenIngredients)
+    },
     methods: {
-      onIngredientChange(key, value) {
+      onIngredientChange(key, value, emit) {
         const ingredient = this.ingredients[key]
         this.chosenIngredients[key] = {
           name: ingredient.name,
           unit: ingredient.unit,
           amount: value
         }
-        this.$emit('ingredients-change', this.chosenIngredients)
+        if (emit) {
+          this.$emit('ingredients-change', this.chosenIngredients)
+        }
       },
       getIngredientForNrPeople(amount, increment) {
         return Math.ceil((this.nrPeople / this.serves) * (amount / increment)) * increment
