@@ -50,9 +50,8 @@
         if (this.internalAmount + value < this.min || this.internalAmount + value > this.max) {
           return
         }
-        const oldAmount = this.internalAmount
         this.internalAmount += value
-        this.$emit('change', oldAmount, this.internalAmount)
+        this.$emit('change', this.internalAmount)
       }
     }
   }

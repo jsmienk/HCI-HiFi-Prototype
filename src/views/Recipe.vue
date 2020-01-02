@@ -2,7 +2,7 @@
   <div class="screen">
     <header class="hover">
       <!-- Back button -->
-      <a class="button back-button" @click="back()">⬅ Back</a>
+      <a class="button back-button" @click="$router.go(-1)">⬅ Back</a>
       <!-- Page title -->
       <h1>Recipe</h1>
       <!-- Weight to center the title -->
@@ -17,7 +17,7 @@
       <!-- Image & nr of persons -->
       <div class="info">
         <div class="hero" :style="getImageStyle(recipe.thumbnail)" />
-        <AmountSelector title="People" :initial-amount="recipe.meta.serves" @change="onPeopleChange" />
+        <AmountSelector title="People" :initial-amount="recipe.meta.serves" @change="nrPeople = $event" />
       </div>
 
       <!-- Description -->
@@ -26,12 +26,13 @@
 
       <!-- Ingredients -->
       <h3>Ingredients for {{ nrPeople }} {{ nrPeople > 1 ? 'people' : 'person' }}</h3>
-      <Ingredients :ingredients="recipe.meta.ingredients" :serves="recipe.meta.serves" :nr-people="nrPeople" />
+      <Ingredients :ingredients="recipe.meta.ingredients" :serves="recipe.meta.serves" :nr-people="nrPeople"
+        @ingredients-change="ingredients = $event" />
     </article>
 
     <!-- Start cooking -->
     <div class="start-cooking hover">
-      <a class="button main-button">Start cooking</a>
+      <a class="button main-button" @click="startCooking()">Start cooking</a>
     </div>
   </div>
 </template>
@@ -49,18 +50,22 @@
     data() {
       return {
         recipe: data.recipes[this.$route.params.id],
-        nrPeople: data.recipes[this.$route.params.id].meta.serves
+        nrPeople: data.recipes[this.$route.params.id].meta.serves,
+        ingredients: {}
       }
     },
     methods: {
-      onPeopleChange(oldAmount, newAmount) {
-        this.nrPeople = newAmount
-      },
       getImageStyle(image) {
         return 'background-image: url("' + image + '");'
       },
-      back() {
-        this.$router.go(-1)
+      startCooking() {
+        this.$router.push({
+          name: 'cooking',
+          params: {
+            id: this.$route.params.id,
+            ingredients: this.ingredients
+          }
+        })
       }
     }
   }

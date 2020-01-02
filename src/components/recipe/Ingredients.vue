@@ -5,7 +5,7 @@
       <AmountSelector class="selector" :initial-amount="ingredient.amount" :unit="ingredient.unit" 
         :amount="getIngredientForNrPeople(ingredient.amount, ingredient.increment)" 
         :increment="ingredient.increment" :min="ingredient.min" :max="ingredient.max" 
-        @change="onIngredientChange(key)" small />
+        @change="onIngredientChange(key, $event)" small />
     </div>
   </div>
 </template>
@@ -22,13 +22,19 @@
       nrPeople: Number
     },
     data() {
-      return {}
+      return {
+        chosenIngredients: {}
+      }
     },
     methods: {
-      onIngredientChange(key, oldValue, newValue) {
-        console.log(key)
-        console.log(oldValue)
-        console.log(newValue)
+      onIngredientChange(key, value) {
+        const ingredient = this.ingredients[key]
+        this.chosenIngredients[key] = {
+          name: ingredient.name,
+          unit: ingredient.unit,
+          amount: value
+        }
+        this.$emit('ingredients-change', this.chosenIngredients)
       },
       getIngredientForNrPeople(amount, increment) {
         return Math.ceil((this.nrPeople / this.serves) * (amount / increment)) * increment

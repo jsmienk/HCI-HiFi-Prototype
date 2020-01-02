@@ -130,7 +130,7 @@ export default {
             'min': 0,
             'max': 10000
           },
-          12: {
+          1: {
             'name': 'Olive oil',
             'unit': 'tbsp',
             'amount': 2,
