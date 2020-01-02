@@ -40,6 +40,10 @@
     font-size: 1.2em;
     box-shadow: 0px 4px 6px 0px #999;
     cursor: pointer;
+    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -khtml-user-select: none; /* webkit (konqueror) browsers */
+    -ms-user-select: none; /* IE10+ */
 
     &.main-button {
       background-color: orange;

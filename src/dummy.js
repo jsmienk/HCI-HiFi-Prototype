@@ -147,7 +147,7 @@ export default {
             'max': 99
           },
           3: {
-            'name': 'Onion',
+            'name': 'Onions',
             'unit': '',
             'amount': 1,
             'increment': 1,
@@ -157,7 +157,7 @@ export default {
         },
         'instructions': [
           'Peel {!0!} potatoes using a speed-peeler, then carefully cut them into thin slices. Pat the potato slices dry with a clean tea towel.',
-          'Peel and finely slice the onion. Drizzle {!1!} tablespoons of oil into a small frying pan over a medium heat, then add {!3!} onion(s) and the potatoes.',
+          'Peel and finely slice the onion. Drizzle {!1!} of oil into a small frying pan over a medium heat, then add {!3!} onion(s) and the potatoes.',
           'Turn the heat down to low and cook for 25 to 30 minutes, or until the onions are turning golden and the potato slices are cooked through. Try not to stir it too much or the potatoes will break up – just use a fish slice to flip them over halfway through.',
           'Crack {!2!} eggs into a mixing bowl, season with a tiny pinch of sea salt and black pepper, then whisk together with a fork.',
           "When the onions and potatoes are cooked, remove the pan from the heat and carefully tip them into the eggs. Transfer the mixture back into the frying pan and place it over a low heat. Cook for around 20 minutes, or until there’s almost no runny egg on top.",

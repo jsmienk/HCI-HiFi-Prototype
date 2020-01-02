@@ -25,7 +25,7 @@
 
     <!-- Start cooking -->
     <div class="start-cooking">
-      <a class="button main-button" @click="startCooking()">Start cooking</a>
+      <a class="button main-button" @click="startCooking">Start cooking</a>
     </div>
   </div>
 </template>
