@@ -2,7 +2,7 @@
   <div class="screen">
     <header class="hover">
       <!-- Back button -->
-      <a class="button back-button">⬅ Back</a>
+      <a class="button back-button" @click="back()">⬅ Back</a>
       <!-- Page title -->
       <h1>Recipe</h1>
       <!-- Weight to center the title -->
@@ -58,6 +58,9 @@
       },
       getImageStyle(image) {
         return 'background-image: url("' + image + '");'
+      },
+      back() {
+        this.$router.go(-1)
       }
     }
   }
