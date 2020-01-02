@@ -2,7 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 // Screens
-import Welcome from '../views/Welcome.vue'
 import Home from '../views/Home.vue'
 import ScreenSaver from '../views/ScreenSaver.vue'
 import Recipe from '../views/Recipe.vue'
@@ -11,7 +10,7 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/home',
+    path: '/',
     name: 'home',
     component: Home
   },
@@ -21,14 +20,9 @@ const routes = [
     component: ScreenSaver
   },
   {
-    path: '/recipe',
+    path: '/recipe/:id',
     name: 'recipe',
     component: Recipe
-  },
-  {
-    path: '/',
-    name: 'welcome',
-    component: Welcome
   }
 ]
 

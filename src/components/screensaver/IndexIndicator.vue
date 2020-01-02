@@ -19,6 +19,7 @@
     margin: 0 4px;
     background-color: #999;
     border-radius: 8px;
+    cursor: pointer;
 
     &.active {
       background-color: #333;

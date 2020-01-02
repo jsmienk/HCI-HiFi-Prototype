@@ -1,16 +1,14 @@
 <template>
-  <div class="home">
+  <div class="home screen">
     <Modal ref="modalGroceriesAdded" header="New groceries added!">
-      Ayy lmao!<br/>
-      Ayy lmao!<br/>
-      Ayy lmao!<br/>
-      Ayy lmao!<br/>
-      Ayy lmao!<br/>
-      Ayy lmao!<br/>
       New groceries have been added to your inventory!
     </Modal>
 
-    <h1>Home</h1>
+    <header>
+      <h1>Home</h1>
+      <span class="date">{{ getDate() }}</span>
+    </header>
+
     <Inventory :data="data.inventory" />
     <Leftovers :data="data.leftovers" />
     <Expires :data="data.expires" />
@@ -41,13 +39,27 @@
     },
     mounted() {
       this.$refs.modalGroceriesAdded.open()
+    },
+    methods: {
+      getDate() {
+        const date = new Date();
+        const d = ('0' + date.getDate()).slice(-2);
+        const m = ('0' + (date.getMonth() + 1)).slice(-2);
+        const y = date.getFullYear();
+        return d + '/' + m + '/' + y;
+      }
     }
   }
 </script>
 
 <style lang="scss">
   .home {
-    padding: 32px;
+    header {
+      .date {
+        font-family: monospace;
+        font-size: 1.5em;
+      }
+    }
 
     section {
       border-top: 1px solid #666;

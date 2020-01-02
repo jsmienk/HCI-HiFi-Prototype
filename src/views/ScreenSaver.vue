@@ -6,7 +6,7 @@
     <div class="screensaver-carousel">
       <div class="screensaver-container">
         <!-- Ads -->
-        <a class="screensaver-slide" v-for="ad in ad_list" :key="ad.id" :href="getRecipeLink(ad.id)">
+        <a class="screensaver-slide" v-for="ad in ad_list" :key="ad.id" :href="getRecipeLink(ad.recipe_id)">
           <!-- Title -->
           <h1>{{ ad.title }}</h1>
           <!-- Image -->
