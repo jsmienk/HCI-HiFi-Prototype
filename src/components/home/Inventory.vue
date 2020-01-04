@@ -3,7 +3,8 @@
     <h2>Inventory</h2>
     <!-- Category grid -->
     <div class="inventory-categories">
-      <div v-for="category in data" :key="category.id" class="inventory-category">
+      <div v-for="category in data" :key="category.id" class="inventory-category"
+        @click="$emit('on-category-click', category)">
           <span class="title">{{ category.title }}</span>
           <div class="thumbnail" :style="getBackgroundStyle(category.thumbnail)" />
       </div>
@@ -35,11 +36,13 @@
         display: inline-grid;
         margin-right: 8px;
         margin-bottom: 16px;
+        cursor: pointer;
 
         .title {
           display: block;
           padding: 0 8px;
           font-size: 1.2em;
+          font-weight: bold;
         }
 
         .thumbnail {

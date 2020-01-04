@@ -4,49 +4,315 @@ export default {
       'id': 0,
       'title': 'Fruit',
       'thumbnail': 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/766/low-calorie-fruit-1516368847.jpg?resize=480:*',
-      'meta': {}
+      'meta': {
+        'items': [
+          {
+            'name': 'Banana',
+            'isWhole': true,
+            'instances': [
+              {
+                'bought': '2020-01-04',
+                'expires': -1,
+                'frozen': false
+              },
+              {
+                'bought': '2020-01-04',
+                'expires': -1,
+                'frozen': false
+              },
+              {
+                'bought': '2020-01-06',
+                'expires': -1,
+                'frozen': false
+              },
+              {
+                'bought': '2020-01-06',
+                'expires': -1,
+                'frozen': false
+              }
+            ]
+          },
+          {
+            'name': 'Apple (Jonagold)',
+            'isWhole': true,
+            'instances': [
+              {
+                'bought': '2019-12-23',
+                'expires': -1,
+                'frozen': false
+              },
+              {
+                'bought': '2019-12-23',
+                'expires': -1,
+                'frozen': false
+              },
+              {
+                'bought': '2019-12-23',
+                'expires': -1,
+                'frozen': false
+              },
+              {
+                'bought': '2019-12-23',
+                'expires': -1,
+                'frozen': false
+              },
+              {
+                'bought': '2020-01-04',
+                'expires': -1,
+                'frozen': false
+              },
+              {
+                'bought': '2020-01-06',
+                'expires': -1,
+                'frozen': false
+              },
+              {
+                'bought': '2020-01-06',
+                'expires': -1,
+                'frozen': false
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       'id': 1,
       'title': 'Vegetables',
       'thumbnail': 'https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/12_powerhouse_vegetables_slideshow/intro_cream_of_crop.jpg',
-      'meta': {}
+      'meta': {
+        'items': [
+          {
+            'name': 'Cauliflower',
+            'isWhole': false,
+            'unit': 'gr',
+            'quantity': 360,
+            'frozen': true,
+            'instances': [
+              {
+                'bought': '2020-01-04',
+                'expires': '2020-01-10'
+              }
+            ]
+          },
+          {
+            'name': 'Cucumber',
+            'isWhole': true,
+            'instances': [
+              {
+                'bought': '2020-01-04',
+                'expires': -1,
+                'frozen': false
+              },
+              {
+                'bought': '2020-01-04',
+                'expires': -1,
+                'frozen': false
+              },
+            ]
+          },
+        ]
+      }
     },
     {
       'id': 2,
       'title': 'Dairy',
       'thumbnail': 'https://en.amerikanki.com/wp-content/uploads/2011/06/Are_Organic_Meat_and_Dairy_Products_Worth_the_Cost.jpg',
-      'meta': {}
+      'meta': {
+        'items': [
+          {
+            'name': 'Low-fat Milk',
+            'isWhole': false,
+            'unit': 'ml',
+            'quantity': 1200,
+            'frozen': false,
+            'instances': [
+              {
+                'bought': '2020-01-04',
+                'expires': '2020-01-12'
+              },
+              {
+                'bought': '2020-01-04',
+                'expires': '2020-01-18'
+              }
+            ]
+          },
+          {
+            'name': 'Yoghurt',
+            'isWhole': false,
+            'unit': 'ml',
+            'quantity': 500,
+            'frozen': false,
+            'instances': [
+              {
+                'bought': '2020-01-04',
+                'expires': '2020-01-21'
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       'id': 3,
       'title': 'Spices',
       'thumbnail': 'https://media.treehugger.com/assets/images/2011/10/spices-market.jpg',
-      'meta': {}
+      'meta': {
+        'items': [
+          {
+            'name': 'Paprika powder',
+            'isWhole': true,
+            'instances': [
+              {
+                'bought': '2020-01-04',
+                'expires': -1
+              }
+            ]
+          },
+          {
+            'name': 'Garlic powder',
+            'isWhole': true,
+            'instances': [
+              {
+                'bought': '2020-01-04',
+                'expires': -1
+              }
+            ]
+          },
+          {
+            'name': 'Onion powder',
+            'isWhole': true,
+            'instances': [
+              {
+                'bought': '2020-01-06',
+                'expires': -1
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       'id': 4,
-      'title': 'Carbonhydrates',
+      'title': 'Carbs',
       'thumbnail': 'https://secure.i.telegraph.co.uk/multimedia/archive/01863/bread_1863824c.jpg',
-      'meta': {}
+      'meta': {
+        'items': [
+          {
+            'name': 'Potatoes',
+            'isWhole': false,
+            'unit': 'gr',
+            'quantity': 2400,
+            'frozen': false,
+            'instances': [
+              {
+                'bought': '2020-01-04',
+                'expires': '2020-01-21'
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       'id': 5,
       'title': 'Meat & Fish',
       'thumbnail': 'https://catalinalinkava.files.wordpress.com/2012/09/meats.jpg',
-      'meta': {}
+      'meta': {
+        'items': [
+          {
+            'name': 'Beyond Meat Burger 8-pack',
+            'isWhole': true,
+            'frozen': true,
+            'instances': [
+              {
+                'bought': '2020-01-06',
+                'expires': '2020-01-18'
+              }
+            ]
+          },
+          {
+            'name': 'AH Salmon filet',
+            'isWhole': true,
+            'frozen': false,
+            'instances': [
+              {
+                'bought': '2020-01-06',
+                'expires': '2020-01-13'
+              }
+            ]
+          },
+          {
+            'name': 'AH Tuna filet',
+            'isWhole': true,
+            'frozen': false,
+            'instances': [
+              {
+                'bought': '2020-01-06',
+                'expires': '2020-01-12'
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       'id': 6,
       'title': 'Drinks',
       'thumbnail': 'https://st3.depositphotos.com/1063437/15487/i/450/depositphotos_154879252-stock-photo-bottles-of-assorted-global-soft.jpg',
-      'meta': {}
+      'meta': {
+        'items': [
+          {
+            'name': 'Coca Cola (1.5L bottle)',
+            'isWhole': true,
+            'frozen': false,
+            'instances': [
+              {
+                'bought': '2020-01-06',
+                'expires': '2021-03-24'
+              }
+            ]
+          },
+          {
+            'name': 'Fanta (1.5L bottle)',
+            'isWhole': true,
+            'frozen': false,
+            'instances': [
+              {
+                'bought': '2020-01-06',
+                'expires': '2020-10-06'
+              },
+              {
+                'bought': '2020-01-06',
+                'expires': '2020-10-06'
+              },
+              {
+                'bought': '2020-01-06',
+                'expires': '2020-09-30'
+              }
+            ]
+          },
+          {
+            'name': 'AH Lemon Drink (1L bottle)',
+            'isWhole': true,
+            'frozen': false,
+            'instances': [
+              {
+                'bought': '2020-01-06',
+                'expires': '2020-01-12'
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       'id': 7,
       'title': 'Other',
       'thumbnail': 'https://static.thenounproject.com/png/97392-200.png',
-      'meta': {}
+      'meta': {
+        'items': []
+      }
     },
   ],
   'leftovers': [
