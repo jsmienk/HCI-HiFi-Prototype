@@ -1,5 +1,5 @@
 <template>
-  <div class="speech-assistant">
+  <div class="speech-assistant" @click="synth.cancel()">
     <div class="wave" :class="{ talking: isTalking }" />
   </div>
 </template>
@@ -57,6 +57,7 @@
     },
     destroyed() {
       clearInterval(this.timer)
+      this.synth.cancel()
     }
   }
 </script>
@@ -73,6 +74,7 @@
 
     padding: 24px;
     box-shadow: 0 8px 40px -10px #333;
+    cursor: pointer;
 
     .wave {
       position: relative;
