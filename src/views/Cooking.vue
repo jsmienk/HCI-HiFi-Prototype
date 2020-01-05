@@ -38,18 +38,22 @@
       <a class="button main-button" @click="doneCooking">Done cooking</a>
       <a class="button control-button" @click="onInstructionClick(selectedInstruction+1)">Next</a>
     </div>
+
+    <!-- Speech Assistant -->
+    <SpeechAssistant :speak="textToSpeech" />
   </div>
 </template>
 
 <script>
   import HeaderHover from '@/components/HeaderHover.vue'
+  import SpeechAssistant from '@/components/SpeechAssistant.vue'
 
   // Dummy JSON data
   import data from "@/dummy.js"
 
   export default {
     name: 'cooking',
-    components: { HeaderHover },
+    components: { HeaderHover, SpeechAssistant },
     props: {
       id: String,
       nrPeople: Number,
@@ -58,7 +62,8 @@
     data() {
       return {
         recipe: data.recipes[this.id],
-        selectedInstruction: 0
+        selectedInstruction: 0,
+        textToSpeech: ''
       }
     },
     methods: {
@@ -91,6 +96,9 @@
           top: topCoord,
           behavior: 'smooth'
         })
+
+        // Speak out loud this instruction
+        this.textToSpeech = instructionElement.innerText
       },
       doneCooking() {
         // TODO: Modal?
