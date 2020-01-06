@@ -3,7 +3,7 @@
     <div class="item-scroller">
       <div class="item-container" :style="getContainerStyle()">
         <!-- Item frame -->
-        <div v-for="item in items" :key="item.id" class="item">
+        <div class="item" v-for="(item, key) in items" :key="key" @click="$emit('item-click', key)">
           <span class="title">{{ item.title }}</span>
           <div class="thumbnail" :style="getBackgroundStyle(item.thumbnail)" />
         </div>
@@ -57,6 +57,7 @@
           display: inline-grid;
           margin-right: 16px;
           max-width: 120px;
+          cursor: pointer;
 
           .title {
             display: block;

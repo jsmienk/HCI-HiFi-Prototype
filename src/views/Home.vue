@@ -23,7 +23,7 @@
     <!-- Products that soon expire -->
     <Expires :data="data.expires" />
     <!-- Recipes -->
-    <Recipes :data="data.recipes" />
+    <Recipes :data="data.recipes" @recipe-click="$router.push({ path: '/recipe/' + $event })" />
   </div>
 </template>
 

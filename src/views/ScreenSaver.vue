@@ -1,12 +1,13 @@
 <template>
   <div class="screensaver">
     <!-- Carousel index indicator -->
-    <IndexIndicator class="screensaver-index-indicator" :size="ad_list.length" :active="currentIndex" @on-index-click="onIndexClick" />
+    <IndexIndicator class="screensaver-index-indicator" :size="Object.keys(ad_list).length" :active="currentIndex" @on-index-click="onIndexClick" />
     <!-- Carousel -->
     <div class="screensaver-carousel">
       <div class="screensaver-container">
         <!-- Ads -->
-        <a class="screensaver-slide" v-for="ad in ad_list" :key="ad.id" :href="getRecipeLink(ad.recipe_id)">
+        <a class="screensaver-slide" v-for="(ad, key) in ad_list" :key="key"
+          :href="getRecipeLink(ad.recipe_id)">
           <!-- Title -->
           <h1>{{ ad.title }}</h1>
           <!-- Image -->

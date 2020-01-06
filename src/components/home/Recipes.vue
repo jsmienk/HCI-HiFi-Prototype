@@ -1,7 +1,7 @@
 <template>
   <section class="recipes">
     <h2>Recipe recommendations</h2>
-    <HorizontalList :items="data" />
+    <HorizontalList :items="data" @item-click="$emit('recipe-click', $event)" />
   </section>
 </template>
 
@@ -10,9 +10,7 @@ import HorizontalList from '@/components/HorizontalList.vue'
 
 export default {
   name: 'recipes',
-  props: ['data'],
-  components: {
-    HorizontalList
-  }
+  components: { HorizontalList },
+  props: ['data']
 }
 </script>

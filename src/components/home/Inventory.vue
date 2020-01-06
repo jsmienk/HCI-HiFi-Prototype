@@ -3,7 +3,7 @@
     <h2>Inventory</h2>
     <!-- Category grid -->
     <div class="inventory-categories">
-      <div v-for="category in data" :key="category.id" class="inventory-category"
+      <div v-for="(category, key) in data" :key="key" class="inventory-category"
         @click="$emit('on-category-click', category)">
           <span class="title">{{ category.title }}</span>
           <div class="thumbnail" :style="getBackgroundStyle(category.thumbnail)" />

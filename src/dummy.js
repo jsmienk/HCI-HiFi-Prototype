@@ -1,7 +1,6 @@
 export default {
-  'inventory': [
-    {
-      'id': 0,
+  'inventory': {
+    0: {
       'title': 'Fruit',
       'thumbnail': 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/766/low-calorie-fruit-1516368847.jpg?resize=480:*',
       'meta': {
@@ -76,8 +75,7 @@ export default {
         ]
       }
     },
-    {
-      'id': 1,
+    1: {
       'title': 'Vegetables',
       'thumbnail': 'https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/12_powerhouse_vegetables_slideshow/intro_cream_of_crop.jpg',
       'meta': {
@@ -114,8 +112,7 @@ export default {
         ]
       }
     },
-    {
-      'id': 2,
+    2: {
       'title': 'Dairy',
       'thumbnail': 'https://en.amerikanki.com/wp-content/uploads/2011/06/Are_Organic_Meat_and_Dairy_Products_Worth_the_Cost.jpg',
       'meta': {
@@ -153,8 +150,7 @@ export default {
         ]
       }
     },
-    {
-      'id': 3,
+    3: {
       'title': 'Spices',
       'thumbnail': 'https://media.treehugger.com/assets/images/2011/10/spices-market.jpg',
       'meta': {
@@ -192,8 +188,7 @@ export default {
         ]
       }
     },
-    {
-      'id': 4,
+    4: {
       'title': 'Carbs',
       'thumbnail': 'https://secure.i.telegraph.co.uk/multimedia/archive/01863/bread_1863824c.jpg',
       'meta': {
@@ -214,8 +209,7 @@ export default {
         ]
       }
     },
-    {
-      'id': 5,
+    5: {
       'title': 'Meat & Fish',
       'thumbnail': 'https://catalinalinkava.files.wordpress.com/2012/09/meats.jpg',
       'meta': {
@@ -256,8 +250,7 @@ export default {
         ]
       }
     },
-    {
-      'id': 6,
+    6: {
       'title': 'Drinks',
       'thumbnail': 'https://st3.depositphotos.com/1063437/15487/i/450/depositphotos_154879252-stock-photo-bottles-of-assorted-global-soft.jpg',
       'meta': {
@@ -306,29 +299,26 @@ export default {
         ]
       }
     },
-    {
-      'id': 7,
+    7: {
       'title': 'Other',
       'thumbnail': 'https://static.thenounproject.com/png/97392-200.png',
       'meta': {
         'items': []
       }
     },
-  ],
-  'leftovers': [
-    {
-      'id': 0,
+  },
+  'leftovers': {
+    0: {
       'title': 'Pasta Pesto',
       'thumbnail': 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/766/low-calorie-fruit-1516368847.jpg?resize=480:*',
       'meta': {}
     },
-    {
-      'id': 1,
+    1: {
       'title': 'Nasi & Saté',
       'thumbnail': 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/766/low-calorie-fruit-1516368847.jpg?resize=480:*',
       'meta': {}
     }
-  ],
+  },
   'expires': [
     {
       'id': 0,
@@ -454,30 +444,26 @@ export default {
       }
     }
   },
-  'ads': [
-    {
-      'id': 0,
+  'ads': {
+    0: {
       'title': 'Best-ever Brussels sprouts',
       'image': 'https://img.jamieoliver.com/jamieoliver/recipe-database/xtra_med/99602345.jpg?tr=w-800',
       'recipe_id': 4
     },
-    {
-      'id': 1,
+    1: {
       'title': 'Beautiful courgette carbonara',
       'image': 'https://img.jamieoliver.com/jamieoliver/recipe-database/xtra_med/94356757.jpg?tr=w-800',
       'recipe_id': 3
     },
-    {
-      'id': 2,
+    2: {
       'title': 'Roasted black bean burgers',
       'image': 'https://img.jamieoliver.com/jamieoliver/recipe-database/xtra_med/92507794.jpg?tr=w-800',
       'recipe_id': 2
     },
-    {
-      'id': 3,
+    3: {
       'title': 'Spanish tortilla',
       'image': 'https://img.jamieoliver.com/jamieoliver/recipe-database/xtra_med/46260004.jpg?tr=w-800',
       'recipe_id': 1
     }
-  ]
+  }
 }

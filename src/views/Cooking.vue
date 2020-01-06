@@ -35,7 +35,7 @@
     <!-- Done cooking -->
     <div class="instruction-controls">
       <a class="button control-button" @click="onInstructionClick(selectedInstruction-1)">Previous</a>
-      <a class="button main-button" @click="doneCooking">Done cooking</a>
+      <a class="button main-button" @click="$router.push({ path: '/' })">Done cooking</a>
       <a class="button control-button" @click="onInstructionClick(selectedInstruction+1)">Next</a>
     </div>
 
